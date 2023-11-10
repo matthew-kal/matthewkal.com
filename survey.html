@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew's Survey</title>
+  
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/survey.css">
+</head>
+<body>
+    <header class="header-main">
+        <div class="header-main-logo">
+            <img src="header-images/Untitled design.png" alt="MK-Logo">
+            <nav class="header-main-nav">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="survey.html">SURVEY</a>
+            </nav>
+        </div>
+        <div class="header-main-SM">
+            <a href="https://www.linkedin.com/in/matthew-kal/"><div class="header-main-SM-LN"></div></a>
+            <a href="https://github.com/matthew-kal"><div class="header-main-SM-GH"></div></a>
+        </div>
+    </header>
+
+    <div class="Survey-header">
+        MY SIMILARITY SURVEY
+    </div>
+
+    <main class="main-container">
+        <script>
+            function calculateSimilarity() {
+                const myChoices = ["Rainbow Six Siege", "Chipotle", "Whiplash", "Hip-hop", "Exercising", "Hawaiian Islands"];
+    
+                const userChoices = [
+                    document.getElementById("favorite-game").value,
+                    document.getElementById("favorite-food").value,
+                    document.getElementById("favorite-movie").value,
+                    document.getElementById("favorite-music").value,
+                    document.getElementById("hobby").value,
+                    document.getElementById("vacation-destination").value
+                ];
+    
+                let matchingChoices = 0;
+                for (let i = 0; i < myChoices.length; i++) {
+                    if (myChoices[i] === userChoices[i]) {
+                        matchingChoices++;
+                    }
+                }
+    
+                const similarityPercentage = Math.round((matchingChoices / 6) * 100);
+    
+                const resultElement = document.getElementById("result");
+                resultElement.textContent = `Similarity: ${similarityPercentage}%`;
+            }
+        </script>
+
+        <div class="container">
+            <h1 class="survey-header">How similar are we to one another?</h1>
+            <div class="question">
+                <label for="favorite-game">What is your favorite game?</label>
+                <select id="favorite-game" name="favorite-game" required>
+                    <option value="">Select an option</option>
+                    <option value="Rainbow Six Siege">Rainbow Six Siege</option>
+                    <option value="Fortnite">Fortnite</option>
+                    <option value="Super Mario Brothers">Super Mario Brothers</option>
+                    <option value="Minecraft">Minecraft</option>
+                    <option value="I Don't Play Video Games">I Don't Play Video Games</option>
+                </select>
+            </div>
+    
+            <div class="question">
+                <label for="favorite-food">What is your fast food?</label>
+                <select id="favorite-food" name="favorite-food" required>
+                    <option value="">Select an option</option>
+                    <option value="Chic-fil-a">Chic-fil-a</option>
+                    <option value="Chipotle">Chipotle</option>
+                    <option value="Wendy's">Wendy's</option>
+                    <option value="McDonalds">McDonalds</option>
+                    <option value="Popeyes">Popeyes</option>
+                </select>
+            </div>
+    
+            <div class="question">
+                <label for="favorite-movie">What is your favorite movie?</label>
+                <select id="favorite-movie" name="favorite-movie" required>
+                    <option value="">Select an option</option>
+                    <option value="Avenger's Infinity War">Avenger's Infinity War</option>
+                    <option value="Interstellar">Interstellar</option>
+                    <option value="Whiplash">Whiplash</option>
+                    <option value="The Godfather">The Godfather</option>
+                    <option value="The Empire Strikes Back">The Empire Strikes Back</option>
+                </select>
+            </div>
+    
+            <div class="question">
+                <label for="favorite-music">What is your favorite music genre?</label>
+                <select id="favorite-music" name="favorite-music" required>
+                    <option value="">Select an option</option>
+                    <option value="Classical">Classical</option>
+                    <option value="Hip-hop">Hip-hop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="R & B">R & B</option>
+                    <option value="Pop">Pop</option>
+                </select>
+            </div>
+    
+            <div class="question">
+                <label for="hobby">What is your favorite hobby or pastime?</label>
+                <select id="hobby" name="hobby" required>
+                    <option value="">Select an option</option>
+                    <option value="Exercising">Exercising</option>
+                    <option value="Skiing">Skiing</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Music">Music</option>
+                </select>
+            </div>
+    
+            <div class="question">
+                <label for="vacation-destination">What is your dream vacation destination?</label>
+                <select id="vacation-destination" name="vacation-destination" required>
+                    <option value="">Select an option</option>
+                    <option value="Turks and Caicos">Turks and Caicos</option>
+                    <option value="Santorini">Santorini</option>
+                    <option value="Hawaiian Islands">Hawaiian Islands</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Tokyo">Tokyo</option>
+                </select>
+            </div>
+            <div class="flex-result">
+            <button type="button" class="button" style="vertical-align:middle" onclick="calculateSimilarity()"> <span> Calculate </span></button>
+            <div id="result">Similarity: XX%</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

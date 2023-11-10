@@ -1,0 +1,50 @@
+body{
+    background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, #070000 13px), repeating-linear-gradient(#5c5c5c, #070000);
+    background-color: #070000;
+}
+
+main{
+    width: 100%;
+    padding-top: 60px;
+    height: calc(100vh - 60px);
+    background-image: url(../body-images/hero.png);
+    background-repeat: no-repeat;
+    background-size: 80vh, cover;
+    background-position: bottom, center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+main .main-intro h1 {
+    font-size: 126px;
+    line-height: 116px;
+    padding-right: 60px;
+    padding-bottom: 100px;
+}
+
+main .main-intro h1{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1s steps(20, end) forwards, blinking .8s infinite;
+    font: bold 126px helvetica;
+    font-style: italic;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+main .main-intro p, .main-quotes p {
+    font-size: 30px;
+    line-height: 30px;
+
+}
+
+main .main-quotes p {
+    border-left: 4px solid var(--site-color-01);
+    padding-left: 20px;
+    margin: 40px 0;
+}
