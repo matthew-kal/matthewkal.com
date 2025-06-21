@@ -1,0 +1,50 @@
+const EverythingIcon = (props: any) => (
+<svg viewBox="0 0 24 24" fill="none" className="w-5 h-5" {...props}>
+    <rect
+      x="6"
+      y="6"
+      width="4"
+      height="4"
+      rx="1"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <rect
+      x="14"
+      y="6"
+      width="4"
+      height="4"
+      rx="1"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <rect
+      x="6"
+      y="14"
+      width="4"
+      height="4"
+      rx="1"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <rect
+      x="14"
+      y="14"
+      width="4"
+      height="4"
+      rx="1"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export default EverythingIcon;
